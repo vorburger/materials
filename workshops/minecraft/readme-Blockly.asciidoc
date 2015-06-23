@@ -1,0 +1,39 @@
+= Minecraft Simple "Modding" using Blockly
+:toc:
+:toc-placement!:
+
+This workshops shows how to "mod" Minecraft Modding using the very simple MIT Scratch-like visual Google Blockly environment on top of ScriptCraft.
+
+toc::[]
+
+[[Download]]
+== Download and Install
+
+=== CanaryMod
+
+In addition to the ScriptCraft mod (which is like a plug-in), you'll also need CanaryMod, which is a Minecraft server.  As described on http://scriptcraftjs.org/download/latest/, get CanaryMod from http://canarymod.net, save JAR, start java -jar canarymod.jar, accept eula.txt, etc. - easy peasy.
+
+
+=== ScriptCraft (includes BlocklyCraft)
+
+When https://github.com/walterhiggins/ScriptCraft/pull/257 will be merged, just (should be able to) just download from http://scriptcraftjs.org (specifically http://scriptcraftjs.org/download/latest/).
+
+Until then, note that ScriptCraft v3.1.8 from 31-May-2015 does NOT include BlocklyCraft yet, you'll have to build it yourself, as follows:
+[source,text]
+----
+$ git clone https://github.com/vorburger/ScriptCraft
+$ cd ScriptCraft
+$ git checkout BlocklyCraft
+$ ant
+----
+====
+
+Save the scriptcraft.jar file to the canarymod/plugins directory, then restart CanaryMod.
+
+== Usage
+
+As described of the "BlocklyCraft visual editor" chapter of the ScriptCraft README at https://github.com/vorburger/ScriptCraft/blob/BlocklyCraft/README.md#blocklycraft-visual-editor, http://localhost:7070/blocklycraft/ should now open an intuitive Blockly-based editor (HTTP server by a simple web server built-into the  BlocklyCraft in ScriptCraft).
+
+== Further documentation
+
+Check the MinecraftModdingIdeas_20150416.docx also attached here.
